@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Custom Properties, update these for your own design */
-
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
@@ -22,9 +20,6 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
-    
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-          0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
@@ -139,10 +134,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-}
-
-.logo {
-    max-width: 100px;
+    background: var(--clr-light)
 }
 
 .logo-item > a {
@@ -157,7 +149,7 @@ header {
 }
 
 .nav {
-    position: fixed;
+    position: absolute;
     background: var(--clr-accent);
     color: var(--clr-light);
     top: 0;
@@ -168,6 +160,7 @@ header {
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
+
 
 .nav__list {
     list-style: none;
@@ -191,6 +184,8 @@ header {
     opacity: 0.7;
 }
 
+
+
 .nav-toggle {
     padding: .5em;
     background: transparent;
@@ -205,8 +200,6 @@ header {
 
 .nav-open .nav {
     transform: translateX(0);
-    
-    
 }
 
 .nav-open .nav-toggle {
@@ -228,10 +221,6 @@ header {
 .nav-open .hamburger::after {
     opacity: 0;
 }
-
-
-
-
 
 
 .hamburger {
@@ -262,6 +251,36 @@ header {
 
 .hamburger::before { top: 6px; }
 .hamburger::after { bottom: 6px; }
+
+
+@media (min-width: 800px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        position: relative;
+        background: var(--clr-accent);
+        color: var(--clr-light);
+        z-index: 100;
+        transform: translateX(0%);
+    }
+
+    .nav__list {
+        flex-direction: row;
+        background: var(--clr-light);
+        color: var(--clr-accent);
+        
+    }
+
+    .nav__link {
+        font-size: var(--fw-reg);
+    }
+
+    .nav__item:not(:last-child) {
+        margin-right: 1em;
+    }
+}
 
 
 /*  Intro section  */
@@ -410,7 +429,7 @@ header {
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    background: var(--clr-dark);
     overflow: hidden;
 }
 
@@ -427,7 +446,7 @@ header {
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
+    transform: scale(1.1);
     opacity: .5;
 }
 
