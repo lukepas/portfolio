@@ -69,8 +69,8 @@ strong { font-weight: var(--fw-bold) }
 .btn {
     display: inline-block;
     padding: .5em 2.5em;
-    background: var(--clr-accent);
-    color: var(--clr-light);
+    background: var(--clr-light);
+    color: var(--clr-accent);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -158,14 +158,13 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -189,7 +188,7 @@ header {
 }
 
 .nav__link:hover {
-    color: var(--clr-accent);
+    opacity: 0.7;
 }
 
 .nav-toggle {
@@ -201,22 +200,29 @@ header {
     right: 1em;
     top: 1em;
     z-index: 1000;
+    
 }
 
 .nav-open .nav {
     transform: translateX(0);
+    
+    
 }
 
 .nav-open .nav-toggle {
     position: fixed;
+
 }
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
+    background: var(--clr-light);
+
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-6px);
+    background: var(--clr-light);
 }
 
 .nav-open .hamburger::after {
@@ -231,6 +237,7 @@ header {
 .hamburger {
     display: block;
     position: relative;
+    
 }
 
 .hamburger,
@@ -241,6 +248,7 @@ header {
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
+    
 }
 
 
@@ -313,7 +321,7 @@ header {
 }
 
 .section__title--services {
-    color: var(--clr-accent);
+    color: var(--clr-light);
     position: relative;
 }
 
@@ -436,7 +444,7 @@ header {
 }
 
 .footer a { 
-    color: inherit;
+    color: var(--clr-light);
     text-decoration: none;
 }
 
