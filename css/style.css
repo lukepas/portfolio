@@ -199,6 +199,12 @@ header {
     
 }
 
+.nav {
+    position: fixed;
+    display: none;
+}
+
+
 .nav-open .nav {
     transform: translateX(0);
 }
@@ -364,6 +370,17 @@ header {
     margin: 0 auto;
 }
 
+.service > h3 {
+    font-size: 1.55em;
+}
+
+
+.service > i {
+    margin-block: 0.5em;
+    font-size: 2.2em;
+}
+
+
 @media (min-width: 800px) {
     .services {
         display: flex;
@@ -420,7 +437,7 @@ header {
 
 .my-work {
     background-color: var(--clr-light);
-    color: var(--clr-light);
+    color: var(--clr-dark);
     text-align: center;    
 }
 
